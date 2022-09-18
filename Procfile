@@ -1,1 +1,1 @@
-web: gunicorn -b :$PORT run.py:app
+web: gunicorn -b :$PORT FLASK:app
