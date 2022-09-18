@@ -1,1 +1,1 @@
-web: gunicorn -b :$PORT Flask:app
+web: gunicorn Flask:app
