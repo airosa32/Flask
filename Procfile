@@ -1,1 +1,1 @@
-web: gunicorn -b :$PORT FLASK:app
+web: gunicorn -b :$PORT run:app
