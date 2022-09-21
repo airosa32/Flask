@@ -1,8 +1,20 @@
-    {% extends 'base.html' %} <!- seta a onde vai se alocado o conteudo abaixo ->
+{% extends 'base.html' %} <!- seta a onde vai se alocado o conteudo abaixo ->
 
-    {% block conteudo %} <!- inicio do conteudo a ser alocado no arquivo indicado no extend ->
+{% block conteudo %} <!- inicio do conteudo a ser alocado no arquivo indicado no extend ->
     
+<main> 
+    <section>
     <h1>Hello {{nome}}</h1>
-    <p>{{contador}}</p>
     
-    {% endblock %} <!- final do conteudo ->
+    <p>{{contador}}</p>
+    </section>
+ 
+    <section>  
+        <img id="imagem_progamming" src="{{ url_for('static', filename='/imagens/progamming.jpg') }}" alt="">
+        
+        <p>apenas um teste</p>
+        <p>Teste de estilo</p>
+    </section>
+</main>
+    
+{% endblock %} <!- final do conteudo ->

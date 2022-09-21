@@ -1,0 +1,39 @@
+#contato h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#contato form legend, .input_padrao {
+    display: block;
+    margin-bottom: 1.4rem;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    background-color: var(--cor-1);
+}
+
+#contato form #checkbox, .radio {
+    margin-bottom: 0.8rem;
+}
+
+#contato form #opcoes {
+    padding: 0.4rem;
+    background-color: var(--cor-1);
+}
+#contato table thead th {  
+    padding: 0.7rem;
+    background-color: var(--cor-3);
+}
+
+#contato table td {
+    padding: 0.7rem;
+    background-color: var(--cor-1);
+}
+
+#contato table .esquerda {
+    border-right: 2px var(--cor-3) solid;
+}
+
+#contato #enviar {
+
+}

@@ -2,7 +2,70 @@
 
 {% block conteudo %}
 
-<p>apenas um teste</p>
-<p>Teste de estilo</p>
+<main id="contato"> 
+    <h1>Formulario</h1>
+
+    <form action="">
+        <label for="nomesobrenome">Nome e Sobrenome<input name="nome" type="text" id="nomesobrenome" class="input_padrao" required></label>
+        
+        <label for="email">Email<input name="email" type="email" id="email" class="input_padrao" required
+            placeholder="seuemail@dominio.com"></label>
+        
+        <label for="telefone">Telefone<input name="telefone" type="tel" id="telefone" class="input_padrao" required
+            placeholder="(XX) XXXXX-XXXX"></label>
+        
+        <label for="mensagem">Mensagem<textarea name="mensagem" class="input_padrao" cols="70" rows="10" class="input-padrao" required></textarea></label>
+        
+        <fieldset>
+            <legend>Como prefere o nosso contato?</legend>
+                
+            <div class="radio">
+                <label for="radio-email"><input name="contato" type="radio" id="radio-email" value="email">Email</label>
+            
+                <label for="radio-telefone"><input name="contato" type="radio" id="radio-telefone" value="telefone">Telefone</label>
+            
+                <label for="radio-whatsapp"><input name="contato" type="radio" id="radio-whatsapp" value="whatsapp" checked>Whatsapp</label>                                      
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Qual horario prefere ser atendido?</legend>
+            <div class="radio">
+                <select name="opcoes" id="opcoes">
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <label for="">Gostaria de receber nossas novidade por email? &ensp;<input name="confirma_envio_email" type="checkbox" id="checkbox" checked></label>
+
+        <input type="submit" value="Enviar Formulario" id="enviar" class="input_padrao">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Dia</th>
+                <th>Horario</th>
+            </tr>
+        </thead>   
+        <tbody> 
+            <tr>
+                <td class="esquerda">Segunda</td>
+                <td>8h ~ 20h</td>
+            </tr>
+            <tr>
+                <td class="esquerda">Quarta</td>
+                <td>8h ~ 20h</td>
+            </tr>
+            <tr>
+                <td class="esquerda">Sexta</td>
+                <td>8h ~ 20h</td>
+            </tr>
+        </tbody>    
+    </table>
+</main>
 
 {% endblock %}
