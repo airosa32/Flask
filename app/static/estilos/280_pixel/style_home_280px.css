@@ -1,0 +1,9 @@
+#home {
+    text-align: center;
+}
+
+img {
+    margin: 1rem 0;
+    width: 260px;
+    box-sizing: border-box;
+}

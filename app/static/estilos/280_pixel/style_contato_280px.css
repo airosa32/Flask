@@ -1,7 +1,15 @@
+#contato {
+    min-height: 514px;
+    min-width: 280px;
+    padding: 0.8rem;
+    box-sizing: border-box;
+}
+
 #contato h1 {
     margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
+    text-align: center;
 }
 
 #contato form legend, .input_padrao {
@@ -9,7 +17,7 @@
     margin-bottom: 1.4rem;
     padding: 0.4rem;
     border-radius: 1rem;
-    background-color: var(--cor-1);
+    background-color: var(--cor-2);
 }
 
 #contato form #checkbox, .radio {

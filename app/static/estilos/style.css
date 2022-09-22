@@ -4,66 +4,39 @@
     --cor-2: #A6E3E9;
     --cor-3: #71C9CE;
     --cor-preta: #000;
-    --rem-imagens: 14rem;
-    --rem-header: 14rem;
-    --rem-footer: 8rem;
-    --rem-fundo: 60rem;
 }
+ @media (min-width: 200px) {
+    body {
+        background-color: var(--cor-1);      
+    }
+    
+    header {
+        height: 5rem;
+        background-color: var(--cor-3);
+    }
 
-#imagem_progamming {
-    width: calc(var(--rem-imagens) * 2);
-    height: calc(var(--rem-imagens) * 2);
-}
+    header nav {
+        position: relative;
+        top: 3rem;
+        left: 7.5rem;
+    }
 
-body {
-    background-color: var(--cor-do-fundo);
-}
+    header nav, ul, li {
+        display: inline;
+    }
 
-main {
-    margin: 0 auto;
-    padding: 2.5rem 2.5rem;
-    width: var(--rem-fundo);
-    height: var(--rem-fundo);
-    box-sizing: border-box;
-}
+    header a {
+        margin-right: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
 
-header {
-    margin: 0 auto;
-    width: var(--rem-fundo);
-    height: var(--rem-header);
-    background-color: var(--cor-3);
-}
+    hr {
+        width: 60%;
+    }
 
-nav {
-    position: relative;
-    top: 8.5rem;
-    left: 36rem;
-}
-
-nav li {
-    display: inline;
-    margin-left: 1.2rem;
-}
-
-nav a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2rem;
-    color: var(--cor-preta);
-}
-
-#rodape {
-    margin: 0 auto;
-    padding-top: 3rem;
-    width: var(--rem-fundo);
-    height: var(--rem-footer);
-    box-sizing: border-box;
-    background-color: var(--cor-3);
-    text-align: center;
-}
-
-nav a:hover {
-    text-shadow: 0 0 6px var(--cor-1), 0 0 8px var(--cor-1), 0 0 16px var(--cor-1);
-    color: var(--cor-1);
-}
+    address {
+        text-align: center;
+        margin-bottom: 0.8rem;
+    }
+ }

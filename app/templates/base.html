@@ -6,29 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='/estilos/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='/estilos/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='/estilos/style_contato.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/estilos/280_pixel/style_home_280px.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/estilos/280_pixel/style_contato_280px.css') }}">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="/index">Home</a></li> 
-                    <li><a href="/contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!- A onde tiver esses dois comando abaixo, vai linkar aqui, o conteudo da pagina que utilizar esse dois comando ->
-    {% block conteudo %} <!- block indica inicio do conteudo (conteudo = posso escolher qualquer nome) ->
+    <div id="container">
+        <header>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="/index">Home</a></li> 
+                        <li><a href="/contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!- A onde tiver esses dois comando abaixo, vai linkar aqui, o conteudo da pagina que utilizar esse dois comando ->
+        {% block conteudo %} <!- block indica inicio do conteudo (conteudo = posso escolher qualquer nome) ->
     
-    {% endblock %} <!- delimita a te onde vai ser inserido o conteudo ->
-    <footer>
-        <div id="rodape">
-            <img src="" alt="">
-            <address>Copyright Airosa</address>
-        </div>
-    </footer>
+        {% endblock %} <!- delimita a te onde vai ser inserido o conteudo ->
+        <footer>
+            <div id="rodape">
+                <img src="" alt="">
+                <hr>
+                <address>Copyright Airosa</address>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
