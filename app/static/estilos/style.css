@@ -1,38 +1,49 @@
 :root {
-    --cor-do-fundo: #E3FDFD;
-    --cor-1: #CBF1F5;
-    --cor-2: #A6E3E9;
-    --cor-3: #71C9CE;
-    --cor-preta: #000;
+    --cor-do-fundo: #f3efe0;
+    --cor-1: #7fefbd;
+    --cor-2: #cba135;
+    --cor-3: #000;
 }
  @media (min-width: 200px) {
     body {
-        background-color: var(--cor-1);      
+        background-color: var(--cor-do-fundo);      
     }
     
     header {
-        height: 5rem;
+        height: 6rem;
         background-color: var(--cor-3);
     }
 
     header nav {
         position: relative;
-        top: 3rem;
-        left: 7.5rem;
+        top: 3.5rem;
+        left: 50%;
     }
 
     header nav, ul, li {
         display: inline;
     }
 
-    header a {
+    header nav a {
         margin-right: 1rem;
+        color: var(--cor-1);
+        font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
     }
 
+    header nav a:hover {
+        transition: 0.5s;
+        color: var(--cor-2);
+        text-shadow: 
+        0 0 8px var(--cor-2), 
+        0 0 16px var(--cor-2), 
+        0 0 32px var(--cor-2);
+    }
+
     hr {
         width: 60%;
+        box-shadow: 0 2px 10px var(--cor-1);
     }
 
     address {
