@@ -6,15 +6,21 @@
     <h1>Formulario</h1>
 
     <form action="">
-        <label for="nome_sobrenome">Nome e Sobrenome<input name="nome_sobrenome" type="text" class="input_padrao" pattern="[a-zA-Z]+ [a-zA-Z]+$" minlength="5" maxlength="40" required></label>
+        <div>
+            <label for="nome_sobrenome">Nome e Sobrenome</label>
+            <input name="nome_sobrenome" type="text" pattern="[a-zA-Z]+ [a-zA-Z]+$" minlength="5" maxlength="40" required>
         
-        <label for="email">Email<input name="email" type="email" class="input_padrao" required
-            placeholder="seuemail@dominio.com"></label>
+            <label for="email">Email</label>
+            <input name="email" type="email" required
+                placeholder="seuemail@dominio.com">
         
-        <label for="telefone">Telefone<input name="telefone" type="tel" class="input_padrao" pattern="[0-9]{11}" required
-            placeholder="(XX) XXXXX-XXXX"></label>
+            <label for="telefone">Telefone</label>
+            <input name="telefone" type="tel" pattern="[0-9]{11}" required
+                placeholder="(XX) XXXXX-XXXX">
         
-        <label for="mensagem">Mensagem<textarea name="mensagem" class="input_padrao" cols="30" rows="10" class="input-padrao" required></textarea></label>
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" cols="30" rows="10" required></textarea>
+        </div>
         
         <fieldset>
             <legend>Como prefere o nosso contato?</legend>
@@ -41,7 +47,7 @@
 
         <label for="">Gostaria de receber nossas novidade por email? &ensp;<input name="confirma_envio_email" type="checkbox" id="checkbox" checked></label>
 
-        <input type="submit" value="Enviar" id="enviar" class="input_padrao">
+        <input type="submit" value="Enviar" id="enviar">
     </form>
 
     <table>

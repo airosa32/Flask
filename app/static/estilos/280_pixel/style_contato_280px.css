@@ -1,54 +1,10 @@
-#contato {
-    min-height: 514px;
-    min-width: 280px;
-    padding: 0.8rem;
-    box-sizing: border-box;
-}
-
-#contato h1 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-#contato form legend, .input_padrao {
-    display: block;
-    margin-bottom: 1.4rem;
-    padding: 0.4rem;
-    border-radius: 1rem;
-    background-color: var(--cor-2);
-}
-
-#contato form #checkbox, .radio {
-    margin-bottom: 0.8rem;
-}
-
-#contato form #opcoes {
-    padding: 0.4rem;
-    background-color: var(--cor-2);
-}
-
-#contato table {
-    box-shadow: 0 0 10px black;
-}
-
-#contato table thead th {  
-    padding: 0.7rem;
-    background-color: var(--cor-2);
-}
-
-#contato table td {
-    padding: 0.7rem; 
-}
-
-#contato table .esquerda {
-    border-right: 2px var(--cor-2) solid;
-}
-
-#contato #enviar {
-    margin: 2.5rem 30%;
-    width: 8rem;
-    height: 2rem;
-    background-color: var(--cor-1);
-}
+@media screen and (min-width: 200px) {   
+    #contato {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3rem;
+        flex: 1; /*grow - aumenta e ocupa o mx de espaço disponivel
+                  shirink - diminui e ocupa o mx de espaço disponivel
+                  basis - escolhe o minino de pixel ao ser criado*/
+    }
+}   

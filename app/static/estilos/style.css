@@ -4,50 +4,46 @@
     --cor-2: #cba135;
     --cor-3: #000;
 }
- @media (min-width: 200px) {
-    body {
-        background-color: var(--cor-do-fundo);      
-    }
-    
-    header {
-        height: 6rem;
-        background-color: var(--cor-3);
-    }
 
-    header nav {
-        position: relative;
-        top: 3.5rem;
-        left: 50%;
-    }
+body {
+    background-color: var(--cor-do-fundo); 
+    display: flex;
+    flex-direction: column;   
+    text-align: center;
+    min-height: 100vh; /* determina a altura minima, unidade de media 
+                          que funciona para ele usando display flex
+                          eo VH = 20%/100% = proporcional a 100% do espaço da pag.*/
+}
+  
+header, footer {
+    padding: 4rem;
+    background-color: var(--cor-3);
+}
 
-    header nav, ul, li {
-        display: inline;
-    }
+header nav a {
+    margin-right: 1rem;
+    color: var(--cor-1);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
-    header nav a {
-        margin-right: 1rem;
-        color: var(--cor-1);
-        font-weight: bold;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    header nav a:hover {
-        transition: 0.5s;
-        color: var(--cor-2);
-        text-shadow: 
+header nav a:hover {
+    transition: 0.5s;
+    color: var(--cor-2);
+    text-shadow: 
         0 0 8px var(--cor-2), 
         0 0 16px var(--cor-2), 
         0 0 32px var(--cor-2);
-    }
+}
 
-    hr {
-        width: 60%;
-        box-shadow: 0 2px 10px var(--cor-1);
-    }
+hr {
+    width: 60%;
+    box-shadow: 0 2px 10px var(--cor-1);
+}
 
-    address {
-        text-align: center;
-        margin-bottom: 0.8rem;
-    }
- }
+address {
+    margin-top: 2rem;
+    color: var(--cor-1);
+}

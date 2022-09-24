@@ -1,9 +1,10 @@
 #home {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 3rem;
 }
 
-img {
-    margin: 1rem 0;
-    width: 260px;
-    box-sizing: border-box;
+div img {
+    width: 100%;
 }
