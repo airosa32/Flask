@@ -14,14 +14,17 @@ body {
                           que funciona para ele usando display flex
                           eo VH = 20%/100% = proporcional a 100% do espaço da pag.*/
 }
+
+li {
+    margin: 0.4rem 0;
+}
   
 header, footer {
-    padding: 4rem;
+    padding: 3rem;
     background-color: var(--cor-3);
 }
 
-header nav a {
-    margin-right: 1rem;
+header nav a {  
     color: var(--cor-1);
     font-size: 2rem;
     font-weight: bold;
@@ -29,8 +32,9 @@ header nav a {
     text-transform: uppercase;
 }
 
-header nav a:hover {
-    transition: 0.5s;
+header nav a:hover, li:hover {
+    transition: 0.9s;
+    transform: scale(1.1);
     color: var(--cor-2);
     text-shadow: 
         0 0 8px var(--cor-2), 

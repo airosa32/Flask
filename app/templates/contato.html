@@ -6,26 +6,26 @@
     <h1>Formulario</h1>
 
     <form action="">
-        <div>
+        <div id="um">
             <label for="nome_sobrenome">Nome e Sobrenome</label>
-            <input name="nome_sobrenome" type="text" pattern="[a-zA-Z]+ [a-zA-Z]+$" minlength="5" maxlength="40" required>
+            <input id="cor" name="nome_sobrenome" type="text" pattern="[a-zA-Z]+ [a-zA-Z]+$" minlength="5" maxlength="40" required>
         
             <label for="email">Email</label>
-            <input name="email" type="email" required
+            <input id="cor" name="email" type="email" required
                 placeholder="seuemail@dominio.com">
         
             <label for="telefone">Telefone</label>
-            <input name="telefone" type="tel" pattern="[0-9]{11}" required
+            <input id="cor" name="telefone" type="tel" pattern="[0-9]{11}" required
                 placeholder="(XX) XXXXX-XXXX">
         
             <label for="mensagem">Mensagem</label>
-            <textarea name="mensagem" cols="30" rows="10" required></textarea>
+            <textarea id="cor" name="mensagem" cols="30" rows="10" required></textarea>
         </div>
         
         <fieldset>
             <legend>Como prefere o nosso contato?</legend>
                 
-            <div class="radio">
+            <div class="dois">
                 <label for="radio-email"><input name="contato" type="radio" id="radio-email" value="email">Email</label>
             
                 <label for="radio-telefone"><input name="contato" type="radio" id="radio-telefone" value="telefone">Telefone</label>
@@ -36,18 +36,20 @@
 
         <fieldset>
             <legend>Qual horario prefere ser atendido?</legend>
-            <div class="radio">
-                <select name="opcoes" id="opcoes">
-                    <option value="manha">Manhã</option>
-                    <option value="tarde">Tarde</option>
-                    <option value="noite">Noite</option>
-                </select>
-            </div>
+
+            <select name="opcoes" id="opcoes">
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+            </select>
+
         </fieldset>
 
-        <label for="">Gostaria de receber nossas novidade por email? &ensp;<input name="confirma_envio_email" type="checkbox" id="checkbox" checked></label>
+        <div id="tres">
+            <label for="">Gostaria de receber nossas novidade por email? &ensp;<input name="confirma_envio_email" type="checkbox" id="checkbox" checked></label>
 
-        <input type="submit" value="Enviar" id="enviar">
+            <input type="submit" value="Enviar" id="enviar">
+        </div>
     </form>
 
     <table>
@@ -59,15 +61,15 @@
         </thead>   
         <tbody> 
             <tr>
-                <td class="esquerda">Segunda</td>
+                <td>Segunda</td>
                 <td>8h ~ 20h</td>
             </tr>
             <tr>
-                <td class="esquerda">Quarta</td>
+                <td>Quarta</td>
                 <td>8h ~ 20h</td>
             </tr>
             <tr>
-                <td class="esquerda">Sexta</td>
+                <td>Sexta</td>
                 <td>8h ~ 20h</td>
             </tr>
         </tbody>    

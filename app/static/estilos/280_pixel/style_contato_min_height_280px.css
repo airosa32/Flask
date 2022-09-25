@@ -1,0 +1,65 @@
+@media screen and (min-width: 280px) {   
+    #contato {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 3rem;
+        font-weight: bold;
+        flex: 1; /*grow - aumenta e ocupa o mx de espaço disponivel
+                  shirink - diminui e ocupa o mx de espaço disponivel
+                  basis - escolhe o minino de pixel ao ser criado*/
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    #um, #tres {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cor, select {
+        background-color: var(--cor-2);
+    }
+
+    #contato * :not(div) {
+        margin-bottom: 0.4rem;
+        padding: 0.4rem;
+        border-radius: 1rem;
+        font-size: 0.9rem;        
+    }
+
+    @keyframes enviar {
+        0% {
+            transform: translateX(-4px);
+        }
+        100% {
+            transform: translateX(4px);
+        }        
+    }
+
+    #enviar {
+        margin-top: 1.6rem;
+        background-image: linear-gradient(50deg, #a59e9e, var(--cor-1));
+        width: 8rem;
+        cursor: pointer;
+        animation: enviar 1s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+
+    table {
+        border-radius: 1rem;
+        margin-top: 3.6rem;
+        background-image: linear-gradient(45deg, var(--cor-1), var(--cor-2));
+    }
+
+    thead {
+        border-bottom: 0.45rem var(--cor-do-fundo) solid;
+    }
+}   
