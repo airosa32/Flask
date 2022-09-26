@@ -10,21 +10,18 @@
         color: var(--cor-2);
     }
 
-  
-    #index #painel {
-        background-color: white;
+    #index form {
         border-radius: 1rem;
-        padding: 6rem 3rem 0 3rem;
-        display: flex;
-        max-width: 26rem;
+        padding: 6rem 4rem 0 4rem;
+        background-color: white;
+        width: 40%;
     }
 
-    #index img {
-        width: 60%;
-        height: 40%;
-        border-radius: 4rem;
-        margin-bottom: 2rem;
-        margin-right: 2rem;
+    #index form, fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
     }
 
     #index legend {
@@ -33,22 +30,41 @@
 
     #index input {
         width: 100%;
-        border-radius: 2rem;
+        height: 1.5rem;
+        border: 0 none;
+        outline: 0;
         margin-top: 1rem;
     }
 
-    #painel_2, #painel_3, a {
+    #index #enviar {
+        margin: 1.4rem 0 2rem 0;
+        border-radius: 1rem;
+        cursor: pointer;
+        background-image: linear-gradient(45deg, var(--cor-1), var(--cor-2));
+    }
+
+    #index #enviar:hover {
+        box-shadow:0 0 6px var(--cor-1);
+    }
+
+    #index .linha_preta {
+        height: 0.03rem;
+        width: 100%;
+        background-color: var(--cor-3);
+    }
+
+    #index #painel_1, #painel_2, a {
         text-decoration: none;
         margin-top: 0.5rem;
         color: var(--cor-2);
     }
 
-    #painel_3 {
+    #index #painel_2 {
         margin-top: 8rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.7rem;
     }
 
-    #painel_3 a:after {
+    #index #painel_2 a:after {
         content: ' ➜';
     }
 } 

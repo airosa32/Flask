@@ -7,8 +7,8 @@
 
     <form action="">
         <div id="um">
-            <label for="nome_sobrenome">Nome e Sobrenome</label>
-            <input id="cor" name="nome_sobrenome" type="text" pattern="[a-zA-Z]+ [a-zA-Z]+$" minlength="5" maxlength="40" required>
+            <label for="nome">Nome</label>
+            <input id="cor" name="nome" type="text" pattern="[a-zA-Z]+$" minlength="3" maxlength="10" required>
         
             <label for="email">Email</label>
             <input id="cor" name="email" type="email" required
@@ -17,9 +17,6 @@
             <label for="telefone">Telefone</label>
             <input id="cor" name="telefone" type="tel" pattern="[0-9]{11}" required
                 placeholder="(XX) XXXXX-XXXX">
-        
-            <label for="mensagem">Mensagem</label>
-            <textarea id="cor" name="mensagem" cols="30" rows="10" required></textarea>
         </div>
         
         <fieldset>
@@ -51,29 +48,6 @@
             <input type="submit" value="Enviar" id="enviar">
         </div>
     </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Dia</th>
-                <th>Horario</th>
-            </tr>
-        </thead>   
-        <tbody> 
-            <tr>
-                <td>Segunda</td>
-                <td>8h ~ 20h</td>
-            </tr>
-            <tr>
-                <td>Quarta</td>
-                <td>8h ~ 20h</td>
-            </tr>
-            <tr>
-                <td>Sexta</td>
-                <td>8h ~ 20h</td>
-            </tr>
-        </tbody>    
-    </table>
 </main>
 
 {% endblock %}

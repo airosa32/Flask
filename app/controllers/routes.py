@@ -18,4 +18,4 @@ def login():
     usuario = request.form.get('usuario')
     senha = request.form.get('senha')
     
-    return f'<h1>{usuario}  {senha}</h1>'
+    return render_template('login.html', user = usuario, password = senha)
