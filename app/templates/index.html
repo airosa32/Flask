@@ -2,19 +2,36 @@
 
 {% block conteudo %} <!- inicio do conteudo a ser alocado no arquivo indicado no extend ->
     
-<main id="home"> 
+<main id="index"> 
     <section>
         <h1>Hello {{nome}}</h1>
 
         <p>{{lista}}</p>
     </section>
- 
-    <section>  
-        <div><img id="imagem_progamming" src="{{ url_for('static', filename='/imagens/progamming.jpg') }}" alt=""></div>
-        
-        <p>apenas um teste</p>
-        <p>Teste de estilo</p>
-    </section>
+
+    <form action="/login">
+        <div id="painel">
+            <img src="{{url_for('static', filename='/imagens/progamming.jpg')}}" alt="imagem_login">
+
+            <div>
+                <fieldset>
+                    <legend>Login</legend>
+    
+                    <input id="usuario" name="usuario" type="email" placeholder="Email" required>
+                    <input id="senha" name="senha" type="password" placeholder="Password" required>
+                    <input type="submit" value="enviar">
+                </fieldset>
+
+                <div id="painel_2">
+                    <a href="#">Ajuda ?</a>
+                </div>
+                
+                <div id="painel_3">
+                    <a href="#">Criar conta</a>
+                </div>
+            </div>
+        </div>
+    </form>
 </main>
     
 {% endblock %} <!- final do conteudo ->

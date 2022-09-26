@@ -33,8 +33,7 @@ header nav a {
 }
 
 header nav a:hover, li:hover {
-    transition: 0.9s;
-    transform: scale(1.1);
+    transition: 0.8s;
     color: var(--cor-2);
     text-shadow: 
         0 0 8px var(--cor-2), 

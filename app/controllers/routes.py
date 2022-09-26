@@ -1,5 +1,5 @@
 from email.policy import default
-from flask import render_template
+from flask import render_template, request
 from app import app
 
 @app.route('/')
@@ -11,3 +11,11 @@ def index():
 @app.route('/contato')
 def contato():
     return render_template('contato.html')
+
+@app.route('/login', methods=['POST'])
+def login():
+    # args no lugar no form aceita por metodo GET
+    usuario = request.form.get('usuario')
+    senha = request.form.get('senha')
+    
+    return f'<h1>{usuario}  {senha}</h1>'

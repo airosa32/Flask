@@ -1,0 +1,54 @@
+@media screen and (min-width: 280px) {   
+    #index {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex: 1;
+        align-items: center;
+        padding: 3rem;
+        font-weight: bold;
+        color: var(--cor-2);
+    }
+
+  
+    #index #painel {
+        background-color: white;
+        border-radius: 1rem;
+        padding: 6rem 3rem 0 3rem;
+        display: flex;
+        max-width: 26rem;
+    }
+
+    #index img {
+        width: 60%;
+        height: 40%;
+        border-radius: 4rem;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+    }
+
+    #index legend {
+        font-size: 2rem;
+    }
+
+    #index input {
+        width: 100%;
+        border-radius: 2rem;
+        margin-top: 1rem;
+    }
+
+    #painel_2, #painel_3, a {
+        text-decoration: none;
+        margin-top: 0.5rem;
+        color: var(--cor-2);
+    }
+
+    #painel_3 {
+        margin-top: 8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #painel_3 a:after {
+        content: ' ➜';
+    }
+} 

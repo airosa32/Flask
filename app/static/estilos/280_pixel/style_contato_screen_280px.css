@@ -11,19 +11,19 @@
                   basis - escolhe o minino de pixel ao ser criado*/
     }
 
-    h1 {
+    #contato h1 {
         font-size: 2.4rem;
         margin-bottom: 1rem;
     }
     
-    #um, #tres {
+    #contato #um, #tres {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
     }
 
-    #cor, select {
+    #contato #cor, select {
         background-color: var(--cor-2);
     }
 
@@ -43,7 +43,7 @@
         }        
     }
 
-    #enviar {
+    #contato #enviar {
         margin-top: 1.6rem;
         background-image: linear-gradient(50deg, #a59e9e, var(--cor-1));
         width: 8rem;
@@ -53,13 +53,13 @@
         animation-iteration-count: infinite;
     }
 
-    table {
+    #contato table {
         border-radius: 1rem;
         margin-top: 3.6rem;
         background-image: linear-gradient(45deg, var(--cor-1), var(--cor-2));
     }
 
-    thead {
+    #contato thead {
         border-bottom: 0.45rem var(--cor-do-fundo) solid;
     }
 }   
