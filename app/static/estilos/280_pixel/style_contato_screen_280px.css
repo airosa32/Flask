@@ -47,22 +47,45 @@
         box-sizing: border-box;
     }
 
-    @keyframes enviar {
+    @keyframes fundo_enviar {
         0% {
-            transform: translateX(-4px);
+            background-image: linear-gradient(0deg, var(--cor-1), var(--cor-2));
+        }
+        25% {
+            background-image: 
+            linear-gradient(90deg, var(--cor-1), var(--cor-2), 
+                            var(--cor-1), var(--cor-2));
+        }
+        50% {
+            background-image: 
+            linear-gradient(180deg, var(--cor-1), var(--cor-2), 
+                            var(--cor-1), var(--cor-2));
+        }
+        75% {
+            background-image: 
+            linear-gradient(270deg, var(--cor-1), var(--cor-2), 
+                            var(--cor-1), var(--cor-2));
         }
         100% {
-            transform: translateX(4px);
+            background-image: 
+            linear-gradient(360deg, var(--cor-1), var(--cor-2), 
+                            var(--cor-1), var(--cor-2));
         }        
     }
 
     #contato #enviar {
-        margin-top: 1.6rem;
-        background-image: linear-gradient(50deg, #a59e9e, var(--cor-1));
+        background-image: linear-gradient(270deg, var(--cor-2), var(--cor-1));
         width: 8rem;
+        margin: 0; 
+        border: none;
         cursor: pointer;
-        animation: enviar 1s;
-        animation-direction: alternate;
+    }
+
+    #contato #fundo_enviar {
+        margin-top: 1.6rem;
+        padding: 0.1rem;
+        border-radius: 1rem;
+        animation: fundo_enviar 2s;
         animation-iteration-count: infinite;
     }
 }   

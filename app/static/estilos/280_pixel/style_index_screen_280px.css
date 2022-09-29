@@ -12,9 +12,9 @@
 
     #index form {
         border-radius: 1rem;
-        padding: 6rem 4rem 0 4rem;
+        padding: 6rem 3rem 0 3rem;
         background-color: white;
-        width: 40%;
+        width: 60%;
     }
 
     #index form, fieldset {
