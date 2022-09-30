@@ -67,4 +67,8 @@
     #index #painel_2 a:after {
         content: ' ➜';
     }
+
+    #index #msg {
+        color: red;
+    }
 } 

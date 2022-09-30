@@ -6,8 +6,7 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    lista = list(range(10))
-    return render_template('index.html', nome = 'tiago', lista = lista)
+    return render_template('index.html')
 
 @app.route('/contato')
 def contato():
@@ -25,6 +24,9 @@ def login():
                     password = '5d88e207', 
                     database='heroku_bf31a8a8a28ff60')
 
-        string = (teste.ver('login'))
-   
-    return render_template('login.html', user = usuario, password = senha, bd = string)
+        if teste.consultar('login', ['email', 'senha'], [usuario, senha]):
+            string = (teste.ver('login'))
+            return render_template('login.html', user = usuario, password = senha, bd = string)
+
+        else:
+            return render_template('index.html', msg = 'usuario ou senha Invalido')
