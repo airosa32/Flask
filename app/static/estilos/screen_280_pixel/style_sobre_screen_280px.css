@@ -1,0 +1,10 @@
+@media screen and (min-width: 280px) {
+    #sobre {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex: 1;
+        align-items: center;
+        padding: 1rem;
+    }
+}

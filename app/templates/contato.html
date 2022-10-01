@@ -3,52 +3,19 @@
 {% block conteudo %}
 
 <main id="contato"> 
-    <h1>Formulario</h1>
-
     <form action="">
-        <div id="um">
-            <label for="nome">Nome</label>
-            <input id="cor" name="nome" type="text" pattern="[a-zA-Z]+$" minlength="3" maxlength="10" required>
+        <legend>Contate-nos</legend>
+
+        <div id="painel">
+            <input id="cor" name="nome" type="text" pattern="[a-zA-Z]+$" minlength="3" maxlength="10" required 
+                placeholder="Nome completo">
         
-            <label for="email">Email</label>
             <input id="cor" name="email" type="email" required
-                placeholder="seuemail@dominio.com">
-        
-            <label for="telefone">Telefone</label>
-            <input id="cor" name="telefone" type="tel" pattern="[0-9]{11}" required
-                placeholder="(XX) XXXXX-XXXX">
+                placeholder="E-mail">
+                <textarea name="texto" id="texto" placeholder="Sua mensagem"></textarea>
         </div>
-        
-        <fieldset>
-            <legend>Como prefere o nosso contato?</legend>
-                
-            <div class="dois">
-                <label for="radio-email"><input name="contato" type="radio" id="radio-email" value="email">Email</label>
-            
-                <label for="radio-telefone"><input name="contato" type="radio" id="radio-telefone" value="telefone">Telefone</label>
-            
-                <label for="radio-whatsapp"><input name="contato" type="radio" id="radio-whatsapp" value="whatsapp" checked>Whatsapp</label>                                      
-            </div>
-        </fieldset>
 
-        <fieldset>
-            <legend>Qual horario prefere ser atendido?</legend>
-
-            <select name="opcoes" id="opcoes">
-                <option value="manha">Manhã</option>
-                <option value="tarde">Tarde</option>
-                <option value="noite">Noite</option>
-            </select>
-
-        </fieldset>
-
-        <div id="tres">
-            <label for="">Gostaria de receber nossas novidade por email? &ensp;<input name="confirma_envio_email" type="checkbox" id="checkbox" checked></label>
-            
-            <div id="fundo_enviar">
-                <input type="submit" value="Enviar" id="enviar">
-            </div>
-        </div>
+        <input type="submit" value="Enviar" id="enviar">
     </form>
 </main>
 

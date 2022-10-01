@@ -20,13 +20,13 @@ li {
 }
   
 header, footer {
-    padding: 3rem;
+    padding: 2rem;
     background-color: var(--cor-3);
 }
 
 header nav a {  
     color: var(--cor-1);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;

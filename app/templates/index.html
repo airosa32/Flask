@@ -6,24 +6,28 @@
     <form action="/login" method="post">
         <fieldset>
             <legend>Login</legend>
-    
-            <input id="usuario" name="usuario" type="email" placeholder="✉ Email" required>
-            <span class="linha_preta"></span class="linha_preta">
-            <input id="senha" name="senha" type="password" minlength="8" placeholder="✎ Password" required>
-            <span class="linha_preta"></span class="linha_preta">
+            
+            <div class="painel">  
+                <i id="painel_ic" class="fa-regular fa-envelope"></i>
+                <input id="usuario" name="usuario" type="email" placeholder="Email" required>
+            </div>  
+
+            <div class="painel">
+                <i id="painel_ic" class="fa-solid fa-user-lock"></i>
+                <input id="senha" name="senha" type="password" minlength="8" placeholder="Senha" required>
+            </div>  
+            <a href="#">Esqueceu a senha ou email ?</a> 
             
             <input id="enviar" type="submit" value="enviar">
-            <span id="msg">{{msg}}</span> 
-        </fieldset>
 
-        <div id="painel_1">
-            <a href="#">Ajuda ?</a>
-        </div>
-                
-        <div id="painel_2">
-            <a href="#">Criar conta</a>
-        </div>
-        
+            <div>
+                <p>Login usando</p>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-google"></i>
+            </div>
+
+            <a id="criar_acc" href="#">Criar conta</a> 
+        </fieldset>        
     </form>
 </main>
     

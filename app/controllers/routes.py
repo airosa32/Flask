@@ -12,6 +12,10 @@ def index():
 def contato():
     return render_template('contato.html')
 
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html')
+
 @app.route('/login', methods=['POST'])
 def login():
     # args no lugar no form aceita por metodo GET
@@ -29,4 +33,4 @@ def login():
             return render_template('login.html', user = usuario, password = senha, bd = string)
 
         else:
-            return render_template('index.html', msg = 'usuario ou senha Invalido')
+            return render_template('index.html')

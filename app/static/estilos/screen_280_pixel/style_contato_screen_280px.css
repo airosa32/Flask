@@ -1,0 +1,79 @@
+@media screen and (min-width: 280px) {   
+    #contato {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 1rem;
+        font-weight: bold;
+        flex: 1; /*grow - aumenta e ocupa o mx de espaço disponivel
+                  shirink - diminui e ocupa o mx de espaço disponivel
+                  basis - escolhe o minino de pixel ao ser criado*/
+    }
+
+    #contato form legend {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #contato form {
+        padding: 6rem 1rem 3rem 1rem;
+        border-radius: 1rem;
+        background-color: white;
+        box-sizing: border-box;
+        width: 90%;
+    }
+    
+    #contato #painel {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+    }
+
+    #contato input {
+        width: 100%;
+        height: 3rem;
+        border-radius: 1rem;
+        box-sizing: border-box;
+        border: none;
+        outline: 0;
+        box-shadow:0 0 10rem -1.3rem var(--cor-3);
+    }
+
+    #contato input:not(#enviar) {
+        padding: 1rem;
+    }
+
+    #contato #texto {
+        width: 100%;
+        height: 12rem;
+        box-sizing: border-box;
+        border-radius: 1rem;
+        border: none;
+        outline: 0;
+        box-shadow:0 0 10rem -5.5rem var(--cor-3);
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    #contato #enviar {
+        margin: 2rem 0 3rem 0;
+        width: 60%;
+        border: 0;
+        border-radius: 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        background-image: linear-gradient(75deg, var(--cor-2),var(--cor-1), var(--cor-2),var(--cor-1), var(--cor-2));
+        background-size: 400%;
+        background-position-x: 100%;
+        transition: 1s;
+    }
+
+    #contato #enviar:hover {     
+        background-position-x: 0%;
+    }
+}   
