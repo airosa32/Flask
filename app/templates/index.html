@@ -3,7 +3,7 @@
 {% block conteudo %} <!- inicio do conteudo a ser alocado no arquivo indicado no extend ->
     
 <main id="index"> 
-    <form action="/login" method="post">
+    <form id="login" action="/login" method="post">
         <fieldset>
             <legend>Login</legend>
             
@@ -15,19 +15,26 @@
             <div class="painel">
                 <i id="painel_ic" class="fa-solid fa-user-lock"></i>
                 <input id="senha" name="senha" type="password" minlength="8" placeholder="Senha" required>
-            </div>  
-            <a href="#">Esqueceu a senha ou email ?</a> 
-            
+            </div> 
+                        
             <input id="enviar" type="submit" value="enviar">
-
-            <div>
-                <p>Login usando</p>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-google"></i>
-            </div>
-
-            <a id="criar_acc" href="#">Criar conta</a> 
         </fieldset>        
+    </form>
+
+    <form id="ajuda" action="/ajuda">
+        <button type="submit">Esqueceu a senha ou email ?</button>
+    </form>
+
+    <form id="login_externo" action="/login_externo">
+        <p>Login usando</p>
+        <div id="painel_ic_externo">
+            <button type="submit" class="fa-brands fa-facebook"></button>
+            <button type="submit" class="fa-brands fa-google"></button>
+        </div>
+    </form>
+
+    <form id="conta_nova" action="/conta_nova">
+        <button type="submit">Criar conta</button> 
     </form>
 </main>
     

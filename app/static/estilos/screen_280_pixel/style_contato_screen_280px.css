@@ -53,7 +53,7 @@
         border-radius: 1rem;
         border: none;
         outline: 0;
-        box-shadow:0 0 10rem -5.5rem var(--cor-3);
+        box-shadow:0 2rem 10rem -5.5rem var(--cor-3);
         margin-top: 2rem;
         padding: 1rem;
     }

@@ -34,3 +34,16 @@ def login():
 
         else:
             return render_template('index.html')
+
+@app.route('/ajuda')
+def ajuda():
+    return render_template('ajuda.html')
+
+@app.route('/login_externo')
+def login_externo():
+    return render_template('login_externo.html')
+
+@app.route('/conta_nova')
+def conta_nova():
+    return render_template('conta_nova.html')
+

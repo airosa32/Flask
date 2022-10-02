@@ -8,9 +8,9 @@
         padding: 1rem;
     }
 
-    #index form {
-        border-radius: 1rem;
-        padding: 6rem 0 3rem 0;
+    #index #login {
+        border-radius: 1rem 1rem 0 0;
+        padding: 6rem 0 0 0;
         background-color: white;
     }
 
@@ -56,7 +56,7 @@
     }
 
     #index #enviar {
-        margin: 0.5rem 0 3rem 0;
+        margin: 2rem 0 0rem 0;
         border: 0;
         border-radius: 1rem;
         cursor: pointer;
@@ -73,16 +73,45 @@
         background-position-x: 0%;
     }
 
-    #index a, #criar_acc {
+    #index a, button {
         text-decoration: none;
         margin: 1rem;
         color: var(--cor-3);
     }
 
-    #index #criar_acc {
-        margin-top: 8rem;
+    #index button {
+        margin-top: 1.5rem;
         text-transform: uppercase;
         font-size: 0.78rem;
         font-weight: 600;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    #index #ajuda, #login_externo, #conta_nova {
+        box-sizing: border-box;
+    }
+
+    #index #ajuda, #login_externo {
+        padding: 0;
+        border-radius: 0;
+        background-color: white;
+    }
+
+    #index #login_externo p {
+        margin-top: 3rem;
+        font-size: 1.15rem;
+    }
+
+    #index #login_externo button {
+        font-size: 2.5rem;
+        padding: 0;
+    }
+   
+    #index #conta_nova {
+        padding: 6rem 0 0 0;
+        border-radius: 0 0 1rem 1rem;
+        background-color: white;
     }
 } 

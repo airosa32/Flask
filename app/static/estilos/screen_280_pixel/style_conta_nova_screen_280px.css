@@ -1,0 +1,11 @@
+@media screen and (min-width: 280px) {   
+    #conta_nova {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 3rem;
+        font-weight: bold;
+        flex: 1;
+    }
+}
