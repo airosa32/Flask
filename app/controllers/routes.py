@@ -30,7 +30,7 @@ def login():
 
         if teste.consultar('login', ['email', 'senha'], [usuario, senha]):
             string = (teste.ver('login'))
-            return redirect('login.html', user = usuario, password = senha, bd = string), teste.sair()
+            return render_template('login.html', user = usuario, password = senha, bd = string), teste.sair()
 
         else:
             return redirect('/index')
