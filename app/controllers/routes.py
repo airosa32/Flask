@@ -33,7 +33,7 @@ def login():
             return redirect('login.html', user = usuario, password = senha, bd = string), teste.sair()
 
         else:
-            return redirect('index.html')
+            return render_template('index.html')
 
 @app.route('/ajuda')
 def ajuda():
