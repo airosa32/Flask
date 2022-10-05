@@ -22,28 +22,26 @@
     </form>
 
     <form id="ajuda" action="/ajuda">
-        <button type="submit">Esqueceu a senha ou email ?</button>
+        <button id="bntg" type="submit">Esqueceu a senha ou email ?</button>
     </form>
 
-    <div id="g_id_onload"
-        data-client_id="838897217727-2p26l7nh0lpqub2mktg0kbc7d0gsb8qo.apps.googleusercontent.com"
-        data-login_uri="https://airosaflask.herokuapp.com/"
-        data-auto_prompt="false">
-    </div>
-    <div class="g_id_signin"
-        data-type="standard"
-        data-size="large"
-        data-theme="outline"
-        data-text="sign_in_with"
-        data-shape="circle"
-        data-logo_alignment="left">
-    </div>
+    <form id="google" action="">
+        <div id="g_id_onload"
+            data-client_id="838897217727-2p26l7nh0lpqub2mktg0kbc7d0gsb8qo.apps.googleusercontent.com"
+            data-context="signin"
+            data-ux_mode="popup"
+            data-login_uri="https://airosaflask.herokuapp.com"
+            data-auto_prompt="false">
+        </div>
 
-    <form id="login_externo" action="/login_externo">
-        <p>Login usando</p>
-        <div id="painel_ic_externo">
-            <button type="submit" class="fa-brands fa-facebook"></button>
-            <button type="submit" class="fa-brands fa-google"></button>
+        <div class="g_id_signin"
+            data-type="standard"
+            data-shape="rectangular"
+            data-theme="outline"
+            data-text="$ {button.text}"
+            data-size="large"
+            data-locale="pt-PT"
+            data-logo_alignment="left">
         </div>
     </form>
 

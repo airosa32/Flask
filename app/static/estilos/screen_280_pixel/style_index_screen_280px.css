@@ -89,29 +89,27 @@
         cursor: pointer;
     }
 
-    #index #ajuda, #login_externo, #conta_nova {
+    #index #ajuda, #conta_nova {
         box-sizing: border-box;
     }
 
-    #index #ajuda, #login_externo {
+    #index #ajuda{
         padding: 0;
         border-radius: 0;
         background-color: white;
-    }
-
-    #index #login_externo p {
-        margin-top: 3rem;
-        font-size: 1.15rem;
-    }
-
-    #index #login_externo button {
-        font-size: 2.5rem;
-        padding: 0;
     }
    
     #index #conta_nova {
         padding: 6rem 0 0 0;
         border-radius: 0 0 1rem 1rem;
+        background-color: white;
+    }
+
+    #index #bntg {
+        margin-bottom: 2rem;
+    }
+
+    #index #google{
         background-color: white;
     }
 } 
