@@ -3,11 +3,18 @@
 {% block conteudo %}
 
 <main id="login">
-
-    <p>User: {{user}}</p>
-    <p>Password: {{password}}</p>
-    <br>
-    <p>Teste: {{bd}}</p>
+    {% if user and password%}
+        <p>User: {{user}}</p>
+        <p>Password: {{password}}</p>
+        <br>
+        <p>Teste: {{bd}}</p>
+        <br>
+        <a href="/logout">Sair ?</a>
+    {% else %}
+        <p>User: {{user}}</p>
+        <br>
+        <a href="/logout">Sair ?</a>
+    {% endif %}
 
 </main>
 

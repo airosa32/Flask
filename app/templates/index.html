@@ -24,25 +24,10 @@
     <form id="ajuda" action="/ajuda">
         <button id="bntg" type="submit">Esqueceu a senha ou email ?</button>
     </form>
-
+    
     <div id="google">
-        <div id="g_id_onload"
-            data-client_id="838897217727-2p26l7nh0lpqub2mktg0kbc7d0gsb8qo.apps.googleusercontent.com"
-            data-context="signin"
-            data-ux_mode="popup"
-            data-login_uri="https://airosaflask.herokuapp.com"
-            data-auto_prompt="false">
-        </div>
-
-        <div class="g_id_signin"
-            data-type="standard"
-            data-shape="circle"
-            data-theme="outline"
-            data-text="$ {button.text}"
-            data-size="large"
-            data-locale="pt-PT"
-            data-logo_alignment="left">
-        </div>
+        <p>Login com:</p>
+        <a href="/login_google"><img src="{{url_for('static', filename='/imagens/google.png')}}" alt=""></i></a>
     </div>
 
     <form id="conta_nova" action="/conta_nova">
