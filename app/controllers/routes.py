@@ -8,7 +8,7 @@ oauth = OAuth(app)
 oauth.register(
     name='google',
     client_id = '838897217727-2p26l7nh0lpqub2mktg0kbc7d0gsb8qo.apps.googleusercontent.com',
-    client_secret = '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',
+    client_secret = '',
     server_metadata_url=CONF_URL,  
     client_kwargs={
         'scope': 'openid email profile'
