@@ -16,6 +16,7 @@ oauth.register(
 )
 
 @app.route('/')
+@app.route('/index')
 def index():
     user = session.get('user')
     return render_template('index.html')
