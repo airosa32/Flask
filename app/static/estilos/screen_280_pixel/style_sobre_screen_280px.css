@@ -7,4 +7,37 @@
         align-items: center;
         justify-content: center;
     }
+
+    #sobre img {
+        width: 7rem;
+        margin-bottom: 2rem;
+        transition: 1.1s;
+    }
+
+    #sobre img:hover {
+        transform: scale(1.1);
+    }
+
+
+    #sobre p {
+        font-weight: bold;
+    }
+
+    #sobre a {
+        margin: 1rem;
+        padding: 0.5rem;
+        width: 3.5rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        background-color: var(--cor-1);
+        transition: 1.1s;
+    }
+
+    #sobre a:hover {
+        box-shadow: 0 0 8px var(--cor-1), 
+        0 0 16px var(--cor-1), 
+        0 0 32px var(--cor-1);
+    }
 }

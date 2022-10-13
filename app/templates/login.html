@@ -4,16 +4,20 @@
 
 <main id="login">
     {% if user and password%}
-        <p>User: {{user}}</p>
-        <p>Password: {{password}}</p>
-        <br>
-        <p>Teste: {{bd}}</p>
-        <br>
-        <a href="/logout">Sair ?</a>
+        <p>User: {{user}}</p><br>
+        <p>Password: {{password}}</p><br>
+        <p>Banco de Dados</p><br>
+        {% for a, b in bd %}
+            <p>Email: {{a}}</p><br>
+            <p>Senha: {{b}}</p><br>
+            <a id="logout" href="/logout">Sair ?</a>
+        {% endfor %}
     {% else %}
-        <p>User: {{user}}</p>
-        <br>
-        <a href="/logout">Sair ?</a>
+        <div id="fundo_img"><img src="{{user.picture}}" alt=""></div>
+        <p>Nome: {{user.given_name}}</p><br>
+        <p>Sobrenome: {{user.family_name}}</p><br>
+        <p>Email: {{user.email}}</p><br>
+        <a id="logout" href="/logout">Sair</a>
     {% endif %}
 
 </main>

@@ -8,4 +8,28 @@
         font-weight: bold;
         flex: 1;
     }
+
+    #login #fundo_img {
+        display: flex;
+        margin-bottom: 2rem;
+        padding: 0.2rem;
+        border-radius: 4rem;      
+
+    }
+
+    #login img {
+        width: 7rem;
+        border-radius: 4rem;
+    }
+
+    #login #logout {
+        width: 4.5rem;
+        margin-top: 6rem;
+        padding: 0.6rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        background-color: var(--cor-1);
+    }
 }

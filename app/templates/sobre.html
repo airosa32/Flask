@@ -3,7 +3,10 @@
 {% block conteudo %}
 
 <main id="sobre"> 
-    
+    <img src="{{ url_for('static', filename='/imagens/qrcode.png')}}">word</img>
+    <p>DOWNLOAD:</p>
+    <a href="{{ url_for('static', filename='/arquivos_download/Tiago_Airosa_Currículo.docx.docx')}}" download="Tiago_Airosa_Currículo">word</a>
+    <a href="{{ url_for('static', filename='/arquivos_download/Tiago_Airosa_Currículo.docx.pdf')}}" download="Tiago_Airosa_Currículo">pdf</a>
 </main>
 
 {% endblock %}
