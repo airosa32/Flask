@@ -7,19 +7,26 @@
         <p>User: {{user}}</p><br>
         <p>Password: {{password}}</p><br>
         <p>Banco de Dados</p><br>
+        
         {% for a, b in bd %}
             <p>Email: {{a}}</p><br>
             <p>Senha: {{b}}</p><br>
-            <a id="logout" href="/logout">Sair ?</a>
         {% endfor %}
+
+        <a id="download" href="/dowload" download="api.json">api json download</a>
+        
+        <a id="logout" href="/logout">Sair</a>
+    </form>
     {% else %}
         <div id="fundo_img"><img src="{{user.picture}}" alt=""></div>
         <p>Nome: {{user.given_name}}</p><br>
         <p>Sobrenome: {{user.family_name}}</p><br>
         <p>Email: {{user.email}}</p><br>
+
+        <a id="download" href="/dowload" download="api.json">api json download</a>
+
         <a id="logout" href="/logout">Sair</a>
     {% endif %}
-
 </main>
 
 {% endblock %}

@@ -22,7 +22,7 @@
         border-radius: 4rem;
     }
 
-    #login #logout {
+    #login #logout, #download {
         width: 4.5rem;
         margin-top: 6rem;
         padding: 0.6rem;
@@ -31,5 +31,9 @@
         text-transform: uppercase;
         color: white;
         background-color: var(--cor-1);
+    }
+
+    #login #download {
+        width: 8rem;
     }
 }

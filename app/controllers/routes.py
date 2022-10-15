@@ -1,6 +1,8 @@
 from app.models.models import conexao
-from flask import render_template, request, redirect, url_for, session
+from flask import jsonify, render_template, request, redirect, url_for, session, send_file
 from authlib.integrations.flask_client import OAuth
+import json
+import os
 from app import app
 
 CONF_URL = 'https://accounts.google.com/.well-known/openid-configuration'
@@ -44,7 +46,8 @@ def login():
 
             if teste.consultar('login', ['email', 'senha'], [usuario, senha]):
                 string = (teste.ver('login'))
-                return render_template('login.html', user = usuario, password = senha, bd = string), teste.sair()
+                teste.sair()
+                return render_template('login.html', user = usuario, password = senha, bd = string)
 
             else:
                 return redirect('/index')
@@ -81,3 +84,21 @@ def logout():
 def conta_nova():
     return render_template('conta_nova.html')
 
+@app.route('/dowload')
+def dowload():
+    with open('api.json', 'w+', encoding='utf-8') as arquivo:
+        teste = conexao(host = 'us-cdbr-east-06.cleardb.net', 
+                    user = 'b6ac0eeaf6adcc', 
+                    password = '5d88e207', 
+                    database='heroku_bf31a8a8a28ff60')
+
+        lista = dict(teste.ver('login'))
+        json.dump(lista, arquivo, ensure_ascii=False, indent=4)
+        teste.sair() 
+
+        wd = os.path.dirname(__file__)
+        wd = wd.replace('\\app', '').replace('controllers', '')
+        nome_arquivo = wd + f'{arquivo.name}'
+
+        send_file(nome_arquivo, as_attachment=True)
+    return redirect('/login')
