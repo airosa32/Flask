@@ -1,9 +1,8 @@
 from app.models.models import conexao
-from flask import jsonify, render_template, request, redirect, url_for, session, send_file
+from flask import jsonify, render_template, request, Response, redirect, url_for, session, send_file
 from authlib.integrations.flask_client import OAuth
-import json
-import os
 from app import app
+import json
 
 CONF_URL = 'https://accounts.google.com/.well-known/openid-configuration'
 oauth = OAuth(app)
@@ -86,19 +85,15 @@ def conta_nova():
 
 @app.route('/dowload')
 def dowload():
-    with open('api.json', 'w+', encoding='utf-8') as arquivo:
-        teste = conexao(host = 'us-cdbr-east-06.cleardb.net', 
-                    user = 'b6ac0eeaf6adcc', 
-                    password = '5d88e207', 
-                    database='heroku_bf31a8a8a28ff60')
+    teste = conexao(host = 'us-cdbr-east-06.cleardb.net', 
+                user = 'b6ac0eeaf6adcc', 
+                password = '5d88e207', 
+                database='heroku_bf31a8a8a28ff60')
 
-        lista = dict(teste.ver('login'))
-        json.dump(lista, arquivo, ensure_ascii=False, indent=4)
-        teste.sair() 
+    lista = dict(teste.ver('login'))
+    lista_tratada = json.dumps(lista)
 
-        wd = os.path.dirname(__file__)
-        wd = wd.replace('\\app', '').replace('controllers', '')
-        nome_arquivo = wd + f'{arquivo.name}'
+    teste.sair() 
 
-        send_file(nome_arquivo, as_attachment=True)
-    return redirect('/login')
+    return Response(f'{lista_tratada}', mimetype='application/json',
+            headers={'Content-Disposition':'attachment;filename=api.json'})
