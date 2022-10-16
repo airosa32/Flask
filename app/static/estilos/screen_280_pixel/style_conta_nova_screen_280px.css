@@ -4,8 +4,56 @@
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        padding: 3rem;
+        padding: 1rem;
         font-weight: bold;
         flex: 1;
+    }
+
+    #conta_nova form legend {
+        font-size: 2rem;
+        margin: 6rem 0 0 0;
+    }
+
+    #conta_nova form, #conta_nova div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        flex: 1;
+        background-color: white;
+        width: 90%;
+        border-radius: 1rem;
+    }
+
+    #conta_nova input {
+        width: 100%;
+        height: 3rem;
+        border-radius: 1rem;
+        box-sizing: border-box;
+        border: none;
+        outline: 0;
+        box-shadow:0 0 10rem -1.3rem var(--cor-3);
+        padding: 1rem;
+        margin: 3rem 0 2rem 0;
+    }
+
+    #conta_nova #enviar {
+        margin: 2rem 0 3rem 0;
+        width: 60%;
+        border: 0;
+        border-radius: 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        background-image: linear-gradient(75deg, var(--cor-2),var(--cor-1), 
+                                  var(--cor-2),var(--cor-1), var(--cor-2));
+        background-size: 400%;
+        background-position-x: 100%;
+        transition: 1s;
+    }
+
+    #conta_nova #enviar:hover {     
+        background-position-x: 0%;
     }
 }
