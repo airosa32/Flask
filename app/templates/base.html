@@ -27,6 +27,12 @@
                 <li><a href="/index">Home</a></li> 
                 <li><a href="/contato">Contato</a></li>
                 <li><a href="/sobre">Sobre</a></li>
+
+                {% if session['user'] or session['user_google'] %}
+                    <hr style="width: 10rem;">
+                    <li><a href="/login">Conta</a></li>
+                    <li><a href="/logout">Sair</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>

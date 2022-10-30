@@ -1,12 +1,6 @@
 @media screen and (min-width: 280px) {   
     #conta_nova {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 1rem;
         font-weight: bold;
-        flex: 1;
     }
 
     #conta_nova form legend {

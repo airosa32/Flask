@@ -1,12 +1,8 @@
-@media screen and (min-width: 280px) {   
+@media screen and (min-width: 280px) { 
+    
     #login {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 3rem;
+        margin-top: 1rem;
         font-weight: bold;
-        flex: 1;
     }
 
     #login #fundo_img {

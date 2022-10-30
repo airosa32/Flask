@@ -15,6 +15,17 @@ body {
                           eo VH = 20%/100% = proporcional a 100% do espaço da pag.*/
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    flex: 1; /*grow - aumenta e ocupa o mx de espaço disponivel
+                shirink - diminui e ocupa o mx de espaço disponivel
+                basis - escolhe o minino de pixel ao ser criado*/
+}
+
 li {
     margin: 0.4rem 0;
 }

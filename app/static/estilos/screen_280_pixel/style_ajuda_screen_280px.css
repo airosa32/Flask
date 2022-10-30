@@ -1,11 +1,3 @@
 @media screen and (min-width: 280px) {   
-    #login {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 3rem;
-        font-weight: bold;
-        flex: 1;
-    }
+
 }

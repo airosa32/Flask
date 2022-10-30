@@ -1,5 +1,5 @@
 from app.models.models import conexao
-from flask import jsonify, render_template, request, Response, redirect, url_for, session, send_file
+from flask import render_template, request, Response, redirect, url_for, session
 from authlib.integrations.flask_client import OAuth
 from app import app
 import json
@@ -19,7 +19,6 @@ oauth.register(
 @app.route('/')
 @app.route('/index')
 def index():
-    user = session.get('user')
     return render_template('index.html')
 
 @app.route('/contato')
@@ -44,17 +43,21 @@ def login():
                         database='heroku_bf31a8a8a28ff60')
 
             if teste.consultar('login', ['email', 'senha'], [usuario, senha]):
-                string = (teste.ver('login'))
                 teste.sair()
-                return render_template('login.html', user = usuario, password = senha, bd = string)
-
+                session['user'] = usuario              
+                return render_template('login.html', user = session['user'])
             else:
                 return redirect('/index')
     
-    if session['user']:
-        return render_template('/login.html', user = session['user'])
-
-    return redirect('/index')
+    try:
+        if session['user']:              
+            return render_template('login.html', user = session['user']) 
+    except:  
+        try:
+            if session['user_google']:
+                return render_template('/login.html', user_google = session['user_google'])
+        except:
+            return redirect('/index')
 
 @app.route('/ajuda')
 def ajuda():
@@ -71,12 +74,12 @@ def login_google():
 def authorized():
     google = oauth.create_client('google')
     token = google.authorize_access_token()
-    session['user'] = token['userinfo']
+    session['user_google'] = token['userinfo']
     return redirect('/login')
 
 @app.route('/logout')
 def logout():
-    session.pop('user', None)
+    session.pop('user', None) or session.pop('user_google', None) 
     return redirect('/')
 
 @app.route('/conta_nova')

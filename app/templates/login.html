@@ -3,30 +3,19 @@
 {% block conteudo %}
 
 <main id="login">
-    {% if user and password%}
+    {% if user %}
         <p>User: {{user}}</p><br>
-        <p>Password: {{password}}</p><br>
-        <p>Banco de Dados</p><br>
         
-        {% for a, b in bd %}
-            <p>Email: {{a}}</p><br>
-            <p>Senha: {{b}}</p><br>
-        {% endfor %}
-
-        <a id="download" href="/dowload" download="api.json">api json download</a>
+    {% elif user_google %}
+        <div id="fundo_img"><img src="{{user_google.picture}}" alt=""></div>
         
-        <a id="logout" href="/logout">Sair</a>
-    </form>
-    {% else %}
-        <div id="fundo_img"><img src="{{user.picture}}" alt=""></div>
-        <p>Nome: {{user.given_name}}</p><br>
-        <p>Sobrenome: {{user.family_name}}</p><br>
-        <p>Email: {{user.email}}</p><br>
-
-        <a id="download" href="/dowload" download="api.json">api json download</a>
-
-        <a id="logout" href="/logout">Sair</a>
+        <p>Nome: {{user_google.given_name}}</p><br>
+        <p>Sobrenome: {{user_google.family_name}}</p><br>
+        <p>Email: {{user_google.email}}</p><br>
+     
     {% endif %}
+
+    <a id="download" href="/dowload" download="">api json download</a>
 </main>
 
 {% endblock %}

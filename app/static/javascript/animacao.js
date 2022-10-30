@@ -7,7 +7,7 @@ function animacao(){
     }else{
         fundo_img.style.backgroundImage='linear-gradient('+x+
                                     'deg, var(--cor-1), var(--cor-2))';
-        x+=1;
+        x++;
     }   
 }
 
