@@ -3,10 +3,10 @@
 {% block conteudo %}
 
 <main id="conta_nova"> 
-    <form action="/conta_nova">
+    <form action="/conta_nova" method="post">
         <legend>Conta Nova</legend>
         <div>
-            <input id="cor" name="nome" type="text" pattern="[a-zA-Z]+$" minlength="3" maxlength="10" required 
+            <input id="cor" name="nome" type="text" pattern="^[a-zA-Z\s]+$" minlength="3" maxlength="40" required 
                 placeholder="Nome completo">
             <input id="usuario" name="usuario" type="email" placeholder="Email" required>
             <input id="senha" name="senha" type="password" minlength="8" placeholder="Senha" required>

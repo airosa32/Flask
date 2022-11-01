@@ -55,7 +55,7 @@ def login():
     except:  
         try:
             if session['user_google']:
-                return render_template('/login.html', user_google = session['user_google'])
+                return render_template('login.html', user_google = session['user_google'])
         except:
             return redirect('/index')
 
@@ -82,9 +82,16 @@ def logout():
     session.pop('user', None) or session.pop('user_google', None) 
     return redirect('/')
 
-@app.route('/conta_nova')
+@app.route('/conta_nova', methods=['POST' , 'GET'])
 def conta_nova():
-    return render_template('conta_nova.html')
+    if request.method == 'POST':
+        nome = request.form.get('nome').strip().split()
+        usuario = request.form.get('usuario').strip()
+        senha = request.form.get('senha').strip()
+        if nome and usuario and senha:
+            return render_template('index.html', new_acc = True)
+    else:
+        return render_template('conta_nova.html')
 
 @app.route('/dowload')
 def dowload():

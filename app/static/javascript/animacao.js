@@ -12,3 +12,8 @@ function animacao(){
 }
 
 setInterval(animacao, 10)
+
+
+function new_acc(){
+    alert('Conta nova criada');
+}

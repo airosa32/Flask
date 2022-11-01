@@ -2,7 +2,10 @@
 
 {% block conteudo %} <!- inicio do conteudo a ser alocado no arquivo indicado no extend ->
     
-<main id="index"> 
+<main id="index">
+    {% if new_acc %} 
+        <p onload="new_acc()"></p>  
+    {% endif %}
     <form id="login" action="/login" method="post">
         <fieldset>
             <legend>Login</legend>
