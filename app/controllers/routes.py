@@ -96,11 +96,14 @@ def conta_nova():
             for pos, letra in enumerate(usuario):
                 if pos == len(senha):
                     porcentagem = (len(senha) - verificacao)*100/len(senha)
-                    if round(porcentagem) <= 60:
+                    print(round(porcentagem))
+                    print(usuario)
+                    if round(porcentagem) < 40:
                         return render_template('conta_nova.html', not_valid = True)
                     
                     return render_template('index.html', new_acc = True)
-                elif letra in senha[pos]:
+                elif letra in senha:
+                    print(letra)
                     verificacao += 1
                 
     else:
