@@ -3,8 +3,8 @@
 {% block conteudo %} <!- inicio do conteudo a ser alocado no arquivo indicado no extend ->
     
 <main id="index">
-    {% if new_acc %} 
-        <p onload="new_acc()"></p>  
+    {% if new_acc %}
+        <p style="display: none;">A82g2frTy2a4G@G!#</p> 
     {% endif %}
     <form id="login" action="/login" method="post">
         <fieldset>
@@ -17,7 +17,7 @@
 
             <div class="painel">
                 <i id="painel_ic" class="fa-solid fa-user-lock"></i>
-                <input id="senha" name="senha" type="password" minlength="8" placeholder="Senha" required>
+                <input id="senha" name="senha" type="password" minlength="6" maxlength="10" placeholder="Senha" required>
             </div> 
                         
             <input id="enviar" type="submit" value="enviar">

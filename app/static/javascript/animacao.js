@@ -14,6 +14,13 @@ function animacao(){
 setInterval(animacao, 10)
 
 
-function new_acc(){
-    alert('Conta nova criada');
+function new_acc(n){
+    var vrf = document.querySelectorAll('p')[0].innerHTML
+    if(vrf=='A82g2frTy2a4G@G!#'){
+        alert('Conta nova criada');
+    }else if(vrf=='8j87fjsS!$ASQffsq!*s#'){
+        alert('Senha muito fraca !');
+    }
 }
+
+window.addEventListener('load', new_acc)

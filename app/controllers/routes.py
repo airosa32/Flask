@@ -1,3 +1,4 @@
+import enum
 from app.models.models import conexao
 from flask import render_template, request, Response, redirect, url_for, session
 from authlib.integrations.flask_client import OAuth
@@ -87,9 +88,21 @@ def conta_nova():
     if request.method == 'POST':
         nome = request.form.get('nome').strip().split()
         usuario = request.form.get('usuario').strip()
-        senha = request.form.get('senha').strip()
+        senha = str(request.form.get('senha').strip())
+        
         if nome and usuario and senha:
-            return render_template('index.html', new_acc = True)
+            verificacao = 0
+
+            for pos, letra in enumerate(usuario):
+                if pos == len(senha):
+                    porcentagem = (len(senha) - verificacao)*100/len(senha)
+                    if round(porcentagem) <= 60:
+                        return render_template('conta_nova.html', not_valid = True)
+                    
+                    return render_template('index.html', new_acc = True)
+                elif letra in senha[pos]:
+                    verificacao += 1
+                
     else:
         return render_template('conta_nova.html')
 
